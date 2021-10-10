@@ -81,7 +81,7 @@ static input_colors_t command_colors;
 static cb_ret_t
 enter (WInput * lc_cmdline)
 {
-    char *cmd = lc_cmdline->buffer;
+    const char *cmd = lc_cmdline->buffer->str;
 
     if (!command_prompt)
         return MSG_HANDLED;
