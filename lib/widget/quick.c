@@ -599,7 +599,7 @@ quick_dialog_skip (quick_dialog_t * quick_dlg, int nskip)
                     *item->quick_widget->u.input.result =
                         tilde_expand (INPUT (item->widget)->buffer);
                 else
-                    *item->quick_widget->u.input.result = g_strdup (INPUT (item->widget)->buffer);
+                    *item->quick_widget->u.input.result = input_get_text (INPUT (item->widget));
                 break;
 
             case quick_radio:
